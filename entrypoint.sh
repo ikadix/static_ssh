@@ -4,7 +4,7 @@ HOSTING_PATH="${HOSTING_PATH:-/app}"
 PORT="${PORT:-8080}"
 
 # Run the ssh daemon
-/usr/sbin/sshd
+/usr/sbin/sshd -h /etc/ssh/ssh_host_ed25519_key
 
 # Enter the hosting path  
 cd "$HOSTING_PATH" || exit
